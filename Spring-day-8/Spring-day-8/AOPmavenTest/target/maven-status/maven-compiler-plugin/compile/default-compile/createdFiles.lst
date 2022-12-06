@@ -1,0 +1,12 @@
+com\met\model\Trainer.class
+com\met\nonspring\test\NonSpringTrainingTest.class
+com\met\spring\test\TrainingTest.class
+com\met\model\METSolutions.class
+com\met\aspect\Participants.class
+com\met\model\TrainingWorkshop.class
+com\met\model\DotNetTrainer.class
+com\met\config\TrainingConfiguration.class
+com\met\model\JavaDotNetTrainer.class
+com\met\model\Workshop.class
+com\met\model\TrainingCompany.class
+com\met\model\JavaTrainer.class

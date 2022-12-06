@@ -1,0 +1,219 @@
+
+
+
+http://localhost:8080/sales/login?userName=abc
+
+&password=abc@123 -> POST
+
+
+
+http://localhost:8080/sales/welcome?userName=abc
+
+
+welcome  -> WelcomeServlet
+
+
+
+public class WelcomeServlet extsnds HttpServlet{
+	
+	public 	doGet(req, response){
+	
+		String unname = 		request.getParamater("userName");
+
+		
+	
+	}
+
+}
+
+
+1) Accept request Paramater
+
+2) Invoke Model Bean
+
+3) redirection 
+
+
+public class LoginServlet extends HttpServlet{
+
+		
+	public void doGet(req, resp){
+		
+		
+		String unname = 		request.getParamater("userName");
+		String pwd = 		request.getParamater("password");
+
+		
+		LoginBean bean = new LoginBean();
+
+		boolean flag = beanauthenticate(unname, pwd);
+
+
+		if(flag) response.sendredirect("order.jsp");
+
+		response.sendRidirect("login.jsp?invalid=true");
+
+		
+
+	}	
+			
+}
+
+
+class LoginBean {
+
+
+	public boolean authenticate(String username, String password){
+		
+		if(valid) return true;
+		else return false;
+
+	}	
+
+}
+
+
+
+
+
+1) Accept request Paramater
+
+2) Invoke Model Bean
+
+3) redirection 
+
+
+
+public class OrderServlet extends HttpServlet{
+
+	
+	public void doPost(request, response){
+
+		int quantity = request.getParamter("qty");
+
+		String pno = request.getParameter("pno");
+
+
+
+
+		
+		OrderBean orderBean = new OrderBean();
+long orderNo = 		orderBean.placeOrder(session, quantity, pno);
+
+
+
+
+
+		
+	if(orderNo > 0){
+			response.sendRidirect("successorder.jsp");
+
+		}else{
+			response.sendRidirect("order.jsp?invalid=true");
+		}
+
+		
+
+	}
+
+}
+
+
+mvc : 
+
+
+
+model -> ModelBean class
+View  - > JSP
+C- > Servlets
+
+
+
+1) Accept request Paramater
+
+2) Invoke Model Bean
+
+3) redirection 
+
+
+
+class OrderBean{
+
+		
+	long placeOrder(String custId, int qty, String pno){
+		
+		//Aftr DB operations
+		return value;
+
+	}
+
+}
+
+
+
+
+Spring frameork MVC says have Single Servlet in our application.
+
+org.springframework.web.servlet.DispatcherServlet
+
+
+FrontController Design pattern:   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

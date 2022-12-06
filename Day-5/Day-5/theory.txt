@@ -1,0 +1,115 @@
+Is JSP a servlet?
+
+
+	hello.jsp     -> hello_jsp.java 
+
+
+<%YourEclipseWorkspaceFolder%>\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\HibernateJSTLTest\org\apache\jsp
+
+
+
+Servlet lifecyclce
+
+JSP lifecyclce
+
+
+implicit objects of JSP
+
+
+ServletCOnfig and Servlet Context
+
+
+JSP standard tags
+
+	<jsp:useBean
+	<jsp:
+
+
+difference between sendredirect and forward
+
+
+
+
+
+
+Glassfish or tomcat
+
+
+
+http://localhost:8080/abc/welcome.jsp  ->   URL
+
+abc -> contextRoot of appplication
+
+
+http://localhost:8080/HibernateJSTLTest/welcome.jsp
+
+
+WebContent
+
+
+
+
+
+can you hear me
+
+HibernateUtil.getSessionFactory();
+
+
+
+HibernateUtil.getSessionFactory();
+
+
+@Entity
+class counter{
+
+	@Id
+	name;
+
+	value;	
+
+}
+
+
+
+
+
+
+update counters set cur_val = +1 where ctr_name=orders;
+
+
+insert into orders values (updatedCountervalue as orderNo  )
+
+beginTransaction();
+
+session.update();
+session.save();
+
+
+commit trabnsaction();
+
+
+
+
+
+
+
+
+
+1) compsite primary key using hibernate
+2) Insert new order 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

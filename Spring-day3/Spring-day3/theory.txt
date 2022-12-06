@@ -1,0 +1,121 @@
+
+Autowire byType
+
+1) find in METSOlutions class how many properties are there
+
+	private Trainer trainer;
+
+2) what is type of property -> Trainer 
+
+3) Trainer is an interface or class
+	
+	a) if interface -> find class implemneting that interface   -> JavaTrainer
+
+
+
+4) Get Spring bean for that class  JavaTrainer -> javaTrainer2, javaTrainer1
+
+
+
+private DataSource dataSource;
+
+
+dataSOurce -> interface
+
+
+DriverManagerDatSource implements DataSource;
+
+
+
+
+autowire constructor
+
+1) in class TW find how many constructor are there    -> 2
+
+2) take constructor which is having max no of arguements
+
+TrainingWorkshop(TrainingCompany trainingCompany) 
+
+
+TrainingCompany trainingCompany
+
+1) type of constructor atg -> TrainingCompany
+
+2) TrainingCompany is an interface or class
+
+3) TrainingCompany is an interface or class
+		a) if interface -> find class implemneting that interface   -> METSOLUTIONS
+
+4)  Get Spring bean for that class METSOLUTIONS -> metSolutions
+
+
+
+
+
+
+
+
+
+Autowire by name
+
+
+
+private Trainer trainer;
+	what is the name of property = "trainer"
+
+
+do we have a bean with that name "trainer"
+
+<bean id="trainer"
+
+
+
+
+
+
+
+
+No qualifying bean of type 'com.met.model.Trainer' available: expected single matching bean but found 2: javaTrainer1, javaTrainer2
+
+
+
+
+
+
+
+
+
+No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+
+
+
+
+
+Dont want COnfiguration in xml    -> JavaCOnfiguration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

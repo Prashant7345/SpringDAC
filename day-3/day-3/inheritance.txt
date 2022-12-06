@@ -1,0 +1,68 @@
+CASH
+
+paymentId   123 
+payAmount   5000 
+payDate      18 June
+
+
+
+Cheque Payment
+
+paymentId   123 
+payAmount   5000 
+payDate      18 June
+chequeNo    1234
+bankName    ICICI
+
+
+
+CARD Pyament
+
+paymentId   123 
+payAmount   5000 
+payDate      18 June
+cardNo      XXXX 1234
+cardTyp     VISA
+
+
+
+
+
+class Payment{
+
+	private int id;
+	private double amount;
+	private Date payDate;	
+
+}
+
+
+class ChequePayment extends Payment{
+
+	chequeNo;
+	bankName;
+}
+
+class CardPayment extends Payement{
+
+	
+	cardNo;
+	cardType;
+}
+
+ORM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

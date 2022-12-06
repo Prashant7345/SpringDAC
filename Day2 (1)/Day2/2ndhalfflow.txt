@@ -1,0 +1,18 @@
+generatedValue
+
+select  identical
+select non identical
+
+
+show session.contains 
+select show dettached
+
+
+update for persistent object
+
+update with dettached
+
+update with transient
+
+saveorupdate
+

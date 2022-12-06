@@ -1,0 +1,6 @@
+HQL - > Hibernate qUERY language
+
+
+Criteria -> Object oriented way of fecthing records from database.
+
+

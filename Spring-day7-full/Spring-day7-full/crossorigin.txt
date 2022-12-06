@@ -1,0 +1,7 @@
+angular js app 			-> 4200
+Spring REST service 		-> 8055
+
+
+Request URL: http://localhost:8055/SpringRESTTest/rest/emp/allEmps
+Referrer Policy: strict-origin-when-cross-origin
+

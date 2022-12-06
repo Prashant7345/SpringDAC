@@ -1,0 +1,250 @@
+http://localhost:8055/SpringMVCTest/mvc/hello  -> MVCServlet
+
+http://localhost:8055/SpringMVCTest/mvc/employee  -> MVCServlet
+
+
+http://localhost:8055/SpringMVCTest/mvc/account  -> MVCServlet
+
+
+http://localhost:8055/SpringMVCTest/abc/hello   -> 404
+
+
+
+
+@Component
+@RequestMapping("/hello")
+class HelloController{
+
+	
+}
+
+
+
+@RequestMapping("/employee")
+class EmployeeController{
+
+	
+}
+
+
+
+Model -> Is the data to be shown on UI.
+
+View -> English name of UI.	"hello"
+
+	hello.jsp
+	employee.jsp
+
+
+
+
+View Resolver -> resolve the view name.
+		ie.e it converts english name of view to actual view name  
+
+		hello -> hello.jsp
+
+		hello -> /jsp/hello.jsp
+
+
+welcome    ->       /pages/welcome.jsp
+
+
+/pages/<%Englishname%>.jsp
+
+prefix -> /pages/
+suffix -> .jsp
+
+
+hello
+
+
+/pages/hello.jsp
+
+
+mvcServlet-servlet.xml
+
+<%ServletName%>-servlet.xml
+
+
+
+
+DispatcherServlet init() method
+
+
+init(){
+
+	ApplictaionContext context = new XmlWebApplicationContext(<%ServletName%>-servlet.xml);
+
+
+	
+
+	
+	//Lookout for <%ServletName%>-servlet.xml
+
+}
+
+
+
+
+
+
+http://localhost:8055/SpringMVCTest/mvc/hello?username=&
+
+
+
+
+
+String userName = request.getParameter("usrName");
+int age = Integer.parseInt(request.getParameter("age"));
+
+
+
+
+
+
+http://localhost:8055/SpringMVCTest/mvc/hello/pathVar/jack/22
+
+
+
+
+
+
+POST
+
+
+int id = Integer.parseInt(request.getparameter("id"));
+String name = request.getParameter("name");
+String designation = request.getParameter("designation");
+String emailId = request.getParameter("designation");
+
+
+EMployee emp = new EMployee(id, name, designation, emailId);
+
+
+EmployeeBean employeeBean = new EMployeeBean();
+boolean flag = employeeBean.saveEmployee(emp);
+
+
+if(flag)
+	response.sendRedirect("succEmp.jsp");
+else
+	response.sendRedirect("failEmp.jsp");
+
+
+
+1) we have to tell JSP page which object has to be populated.   -> Initialization of form
+
+	Initialization of form (JSP page) we say this is default object, you need to populate this object
+
+	modelAttribute form in JSP	
+
+	<form modelAttribute="employee">			//employee is from ModelAndView
+
+
+		
+	
+		
+
+	</form>
+
+2) provided the populated employee object -> Submission of form
+	in Submission of form we get the populated object.
+
+
+
+
+
+
+UserInputs				UserdataValidations				Db code
+
+
+
+Controller				Service						DAO
+
+
+EMployeeController			EmployeeService					EmployeeDAO
+
+
+
+
+
+
+
+
+
+@java.lang.annotation.Target(value={java.lang.annotation.ElementType.TYPE})
+@java.lang.annotation.Retention(value=java.lang.annotation.RetentionPolicy.RUNTIME)
+@java.lang.annotation.Documented
+@org.springframework.stereotype.Component
+public abstract @interface org.springframework.stereotype.Controller extends java.lang.annotation.Annotation {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+merge
+
+checks whether persistent object exits in Persistence Cntect
+1) if yes
+
+	copy all values of dettached object to persistent object
+  
+        if differce found fire update query 	
+
+2) if no
+
+	a) fire select query and bring the object into perisstent object
+
+	b) copy all values of dettached object to persistent object
+  
+
+       if differce found fire update query 
+
+
+
+Persistent Object doesnot exist
+
+
+Hibernate: select account0_.acc_id as acc_id1_0_0_, account0_.active as active2_0_0_, account0_.balance as balance3_0_0_, account0_.name as name4_0_0_ from account_tbl account0_ where account0_.acc_id=?
+before merging
+Hibernate: select account0_.acc_id as acc_id1_0_0_, account0_.active as active2_0_0_, account0_.balance as balance3_0_0_, account0_.name as name4_0_0_ from account_tbl account0_ where account0_.acc_id=?
+Hibernate: update account_tbl set active=?, balance=?, name=? where acc_id=?
+
+
+
+Persistent Object exist

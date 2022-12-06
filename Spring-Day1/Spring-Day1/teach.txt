@@ -1,0 +1,92 @@
+EJB -> ENterprise Java Bean   -> APplication Server (Glassfish) for deploymnet 
+
+
+
+
+
+Rod Johnson -> invneted Spring Framework
+
+2002
+
+
+Apache 2003 
+
+
+
+Hibernate -> ORM
+
+spring  -> It provides infrastruture for development of Java application
+
+focus only on business logic
+
+web development
+Data Access
+Transaction management
+
+
+configuration
+
+
+1) write creation of employees in XML file / configuration file.
+2) Someone should read that xml file and create employee objects.
+
+Someone -> Spring COntainer/ IOC container.
+
+
+SpringContainer is represneted in form of interface called as ApplicationCOntext
+
+ApplicationCOntext is an interface
+below are 3 implementation of ApplicationCOntext.
+
+	ClassPathXmlApplicationCOntext			->   read xml present in claspath and create SpringCOntainer.
+	FileSystemXMLApplicationContext
+	WebXmlApplicationCOntext
+
+
+
+
+ways of defining configuration
+a) XML
+b) Annotation
+3) JavaConfiguration
+
+
+log files
+
+
+
+
+
+
+
+
+public class org.springframework.context.support.ClassPathXmlApplicationContext extends org.springframework.context.support.AbstractXmlApplicationContext {
+
+
+Spring container invokes/manages lifecycel method of Spring bean.
+
+
+
+web container invokes lifecycle method of Servlet class
+	init()
+	service()
+	destroy()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

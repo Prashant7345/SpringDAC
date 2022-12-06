@@ -1,0 +1,189 @@
+from Trainer interface 
+
+JavaTrainer
+DotNetTrainer
+
+
+
+List<Trainer> trainers;
+
+
+Trainer
+
+
+JavaTrainer
+DotNetTrainer
+
+
+
+3 beans  -> javaTrainer1, javaTrainer2, dotNetTrainer
+
+
+
+
+
+Boiler plate code: 1) COde gets duplicated accross multiple java files and they are not relevent to bsuness logic code .
+		   2) cuts your business logic -> instead of developer focusing on bsuiness logic he spends time more on setting up infrastucture code.
+	   	
+
+
+
+
+creation of connection
+creation of pstmt
+
+
+	business lofic
+
+
+Exception handling
+
+clsosing the connection
+
+
+
+
+
+
+Aspect Oriented Programming (AOP)
+
+
+
+Aspect is used to  modularize cross cutting concern 
+
+
+
+class Aspect  ->   @Aspect
+
+OOPS ->  
+AOP ->   
+
+
+
+
+All the medthod execution in our project is called as JoinPoint
+conductWorkshop()
+conductTraining()
+train()
+
+
+Method on which we are going to resolve Boiler plate code is PointCut   here in our project train().
+
+
+
+
+
+com.sun.proxy.$Proxy21  -> JDK proxy gets created here    
+
+
+JDKProxy class always implemements interface, so it is always recommended to write code in java file as interface type (Not particular Class type)
+
+class JDKProxy  implemnts Trainer{
+
+
+
+	Trainer t;
+
+
+	JDKProxy(Trainer trainer){
+		this.t = trainer;
+	}		
+
+
+	public void train(){
+
+		
+		System.out.println("Participants are Joining zoom");
+		System.out.println("Participants are taking seats");
+
+		trainer.train();
+
+		System.out.println("Training completed");	
+		
+	}
+
+
+}
+
+Spring AOP, proxy gets created at runtime
+
+
+
+1) COmpilation
+2) class loading
+3) Runtime
+
+
+
+
+
+
+
+
+
+
+@Autowired
+private List<Trainer> trainers;
+
+
+Trainer 
+
+JT
+DT
+
+
+
+
+function abc(){
+	
+	try{
+
+		
+			
+	}catch(Exception ex){
+
+		throw e;
+	}finally{
+		Sysout("Finally");
+	}
+
+
+	Sysout("Training completed");
+}
+
+
+if class does not implement interface CGLIBProxy class will be created 
+
+
+
+
+** If we make class final and that class implements interface then a JDKProxy class will be generated ** BUT,
+** If our class does not implement interface then a CGLIBProxy class is created but that class is final then no Proxy class will be created **
+
+
+
+
+CGLIB proxy
+
+
+
+class JavaDotNetTrainerCGLIBProxy extends JavaDotNetTrainer{
+
+	
+	public void train(){
+
+		
+		System.out.println("Participants are Joining zoom");
+		System.out.println("Participants are taking seats");
+
+		super.train();
+
+		System.out.println("Training completed");	
+		
+	}
+
+}
+
+
+
+

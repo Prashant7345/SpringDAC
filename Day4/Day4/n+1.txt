@@ -1,0 +1,57 @@
+select this_.id as id1_2_0_, this_.emailId as emailid2_2_0_, this_.name as name3_2_0_ from Employee this_;
+
+
+ select listaddres0_.fk_emp_id as fk_emp_id4_1_0_, listaddres0_.id as id1_1_0_, listaddres0_.id as id1_1_1_, listaddres0_.city as city2_1_1_, listaddres0_.country as country3_1_1_ from Address listaddres0_ where listaddres0_.fk_emp_id=?
+
+
+
+for getting only the employee information  (1)
+
+5 times select query for getting address information for each 5 employee (5)
+
+
+
+
+10 empl records in our database
+
+
+
+
+1 + 10
+
+100 
+1 + 100
+
+(N + 1) problem
+
+
+
+
+eager
+
+
+join
+
+employee and address table
+
+
+
+
+select this_.id as id1_2_1_, this_.emailId as emailid2_2_1_, this_.name as name3_2_1_, listaddres2_.fk_emp_id as fk_emp_id4_1_3_, listaddres2_.id as id1_1_3_, listaddres2_.id as id1_1_0_, listaddres2_.city as city2_1_0_, listaddres2_.country as country3_1_0_ from Employee this_ left outer join Address listaddres2_ on this_.id=listaddres2_.fk_emp_id
+
+
+
+select this_.id as id1_2_1_, this_.emailId as emailid2_2_1_, this_.name as name3_2_1_, listaddres2_.fk_emp_id as fk_emp_id4_1_3_, listaddres2_.id as id1_1_3_, listaddres2_.id as id1_1_0_, listaddres2_.city as city2_1_0_, listaddres2_.country as country3_1_0_ from Employee this_ left outer join Address listaddres2_ on this_.id=listaddres2_.fk_emp_id
+
+
+
+
+
+
+
+
+
+
+
+
+

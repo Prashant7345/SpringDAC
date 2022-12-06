@@ -1,0 +1,185 @@
+Employee employee1 = new Employee();    -> 1
+
+Employee employee2 = new Employee();    -> 2
+
+Employee employee4 = new Employee("Jack", 21);  ->  3
+
+Employee employee5 = new Employee("Jill", 22);  ->  4
+
+
+Employee employee6 = new Employee();    -> id: 5
+employee6.setName("Ramesh");
+employee6.setAge(25);
+employee6.setDesignation("SSE");
+employee6.setSalary(52000);
+
+
+combination of constructor and property 
+
+Employee employee7 = new Employee("Raju", 22);  ->  6
+employee6.setDesignation("Manager");
+employee6.setSalary(78000);
+
+
+
+6 Singleton object to be created during initialization phase
+
+2 time proptotype invoked   -?>     7 8 
+
+
+1 singleton object created when yoou require it  ->   9
+
+
+
+
+
+<bean id="address1" class="com.met.model.Address">
+ 		<property name="city" value="Mumbai"></property>
+ 		<property name="country" value="India"></property>
+ 	</bean>
+ 	
+ 	<!-- Employee(String name, int age, String designation, double salary, Address address) { -->
+ 	
+ 	
+We just defining dependency.Dependency injection.
+Employee9 bean is dependent on address1 bean.
+
+At runtime S.C during creation of employee9 bean it will inject dependent bean (address1) bean.
+
+Spring container writing java code . 
+but actually it is responsiblity of java developer to write java code.
+
+
+Inversion of control/ 
+
+ 	
+<bean id="employee9" class="com.met.model.Employee">
+	<constructor-arg name="name" value="Ganesh"></constructor-arg>
+	<constructor-arg name="age" value="33"></constructor-arg>
+	<constructor-arg name="designation" value="VP"></constructor-arg>
+	<constructor-arg name="salary" value="125000"></constructor-arg>
+	<constructor-arg name="address" ref="address1"></constructor-arg>
+</bean>
+
+
+
+Address address1 = new Address();
+address1.setCity(Mumbai);
+address1.setCountry("India");
+
+
+
+
+
+
+Address address2 = new Address();
+address2.setCity(NY);
+address2.setCountry("USA");
+
+
+
+Employee employee 9 = new nEmployee("Ganesh", 33, "VP", 125000, address2);
+
+
+
+
+TrainingWorkshop
+	|
+	|
+	|
+Training COmpany
+	|
+	|
+	|
+Trainer
+
+
+
+
+
+interface Trainer{						class JavaTrainer implements Trainer{}
+
+	train();
+	
+}
+
+
+interface TC{							class METSolutions implements TC
+
+	conductTraining();
+	
+}
+
+
+interface Workshop{						class TrainingWorkshop implemnts Workshop{}
+
+	conductWorkshop();
+}
+
+
+
+"TrainingWorkshop :: conductWorkshop"
+METSolutions :: conductTraining"
+JavaTrainer :: train
+
+Ram is teaching on javaSubjects OOPS JDBC, COLLECTIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

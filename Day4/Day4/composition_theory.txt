@@ -1,0 +1,133 @@
+Emplyee has an address   ->    Unidirectional
+
+ONE To Many
+
+
+1 Employee can have multiple addresses.
+
+
+a) JOIN TABLE 
+
+
+
+Hibernate: insert into Employee (emailId, name, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, id) values (?, ?, ?)
+Hibernate: insert into Employee_Address (Employee_id, listAddress_id) values (?, ?)
+Hibernate: insert into Employee_Address (Employee_id, listAddress_id) values (?, ?)
+
+
+
+
+If the join is for a unidirectional OneToMany mapping using a foreign key mapping strategy, the
+foreign key is in the table of the target entity.
+
+
+
+ONE To Many -> unidirectional  
+
+Hibernate: insert into Employee (emailId, name, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, id) values (?, ?, ?)
+Hibernate: update Address set fk_emp_id=? where id=?
+Hibernate: update Address set fk_emp_id=? where id=?
+
+
+
+
+
+
+
+One TO many
+1) extra update query
+
+
+
+
+
+
+
+
+
+One To Many Bidirection
+
+Hibernate: insert into Employee (emailId, name, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, fk_emp_id, id) values (?, ?, ?, ?)
+Hibernate: insert into Address (city, country, fk_emp_id, id) values (?, ?, ?, ?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Addrss has employee
+
+MANy to ONE unidirection
+
+
+
+If the join is for a OneToOne or ManyToOne mapping using a foreign key mapping strategy, the
+ foreign key column is in the table of the source entity or embeddable.
+
+
+
+
+
+
+insert into address    1
+insert into employee   2
+insert into address    3
+
+
+
+
+Hibernate: insert into Employee (emailId, name, id) values (?, ?, ?)
+Hibernate: insert into Address (city, country, fk_emp_id, id) values (?, ?, ?, ?)
+Hibernate: insert into Address (city, country, fk_emp_id, id) values (?, ?, ?, ?)
+
+
+
+
+no extra update queries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
